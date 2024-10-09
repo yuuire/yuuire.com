@@ -1,0 +1,148 @@
+@font-face {
+    font-family: Satoshi;
+    src: url(assets/fonts/Satoshi-Variable.ttf);
+}
+
+* {
+    --primary: #191921;
+    --secondary: #1A1A22;
+    --text: #FFFFFF;
+    --secondary-text: #fff;
+    --icons: #fff;
+    --spotifyContainerBackground: rgba(39, 58, 71, 0.2);
+    --spotifyContainerBorder: 2px solid rgba(39, 58, 71, 0.1);
+    font-family: Satoshi, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--primary);
+    background-image: url("assets/images/background.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+
+/* Profile */
+
+.card {
+    min-width: 600px;
+    background-color: var(--secondary);
+    backdrop-filter: blur(10px);
+    max-width: 70%;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    padding: 10px 0px 10px 0px;
+}
+
+.card h1 {
+    text-shadow: 0 0 15px var(--text);
+}
+
+
+.profile {
+    text-align: center;
+    padding: 30px;
+}
+
+.avatar img {
+    /* margin-top: -22%; */
+    /* box-shadow: 0 0 25px gray; */
+    object-fit: cover;
+    width: 170px;
+    height: 170px;
+    border-radius: 10%;
+}
+
+p {
+    font-size: 19px;
+    /* font-weight: 570; */
+    color: var(--secondary-text);
+}
+
+.bio {
+    padding-bottom: 1px;
+}
+
+/* Spotify embedded track */
+
+.spotifyContainer {
+    /* margin-top: 10px; */
+    background-color: var(--spotifyContainerBackground);
+    border: var(--spotifyContainerBorder);
+    border-radius: 25px;
+    box-sizing: border-box;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    justify-content: space-between;
+    width: 100%;
+    display: inline-block;
+}
+
+.spotifyContent {
+    padding: 15px 15px 15px 15px;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+}
+
+iframe {
+    margin-bottom: -5cap;
+}
+
+/* Social icons section */
+
+.socials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.social {
+    flex-wrap: wrap;
+    font-size: 35px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Static social icons (color and filter should be commented when colored section is uncommented) */
+
+svg {
+    overflow: visible;
+    color: var(--icons);
+    filter: drop-shadow(1px 0 5px #ebebeb);
+}
+
+/* Animations */
+
+.social a {
+    transition: transform 0.2s;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+}
+
+/* Smaller screens */
+
+@media (max-width: 800px) {
+    .card {
+        max-width: 100%;
+        min-width: 350px;
+        padding: 20px 0px;
+        /* width: 350px; */
+    }
+}
+
